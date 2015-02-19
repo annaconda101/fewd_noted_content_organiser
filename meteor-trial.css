@@ -34,6 +34,7 @@
 html {
   -webkit-tap-highlight-color:transparent;
   position: relative;
+  margin: none;
 } 
 body {
 	width: 100%;
@@ -45,7 +46,7 @@ body {
 /*articleHome*/
 
 header {
-	width: 98%;
+	width: 100%;
 	background-color: black;
 	color: white;
 	color: rgb(253, 251, 246);
@@ -93,10 +94,9 @@ div.menu ul {
   border-style: solid black;
 }
 section {
-	background-color: rgba(159, 172, 175, 0.23);
-	width: 98%;
-	padding-top: 5%;
-	padding-bottom: 5%;
+	width: 100%;
+	padding-top: 2%;
+	padding-bottom: 3%;
 }
 section h1 {
 	font-family: 'Questrial', sans-serif;
@@ -120,18 +120,28 @@ section h2 {
 
 /*articleUserOptions*/
 
-.article-user-options {
-  background-image: url("img/img-grp.jpeg");
-  background-color: gray;
+.article-home {
+  background-image: url("img/img-post-it.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .article-search-div {
   float: left;
-  background-color: pink;
+  background-color: rgba(0, 0, 0, 0.9);
   width: 40%;
   margin-left: 5%;
   margin-right: 5%;
-  background-color: rgba(216, 122, 215, 0.31);
+  background-color: rgba(230, 230, 230, 0.72);
+  font-family: 'Questrial', sans-serif;
+  border: solid 1px gray;
+  box-shadow: 5px 5px 5px #888888;
+}
+
+.article-search-div h4 {
+	margin-left: 14%;
+	font-size: 20px;
 }
 .article-search-div ul {
 	padding: 0;
@@ -139,7 +149,49 @@ section h2 {
 }
 .article-search-div li {
 	list-style: none;
+	padding-bottom: 5%;
 }
+.article-search-div ul{
+  list-style: none;
+  margin-left: 14%;
+  padding-bottom: 5%;
+}
+.article-search-div ul input {
+  padding: 2px;
+  width: 80%;
+  font-size: 1em;
+  line-height: 24px;
+  border-radius: 4px;
+  border: none;
+  margin-top: 10px;
+  border: 1px solid rgba(128, 128, 128, 0.478431);
+}
+.article-search-div ul select {
+  padding: 2px;
+  width: 80%;
+  font-size: 1em;
+  line-height: 24px;
+  border-radius: 4px;
+  border: none;
+  margin-top: 10px;
+  border: 1px solid rgba(128, 128, 128, 0.478431);
+}
+
+.article-search-div button {
+  padding: 19px 51px 17px;
+  font-size: 17px;
+  line-height: 16px;
+  border: 2px solid;
+  text-transform: uppercase;
+  background-color: transparent;
+}
+.article-search-div button:hover {
+  background-color: rgb(223, 150, 18);
+}
+
+
+
+
 
 .article-view-div {
   float: left;
@@ -148,44 +200,17 @@ section h2 {
 }
 
 
+
+
+
 /*Templates*/
 
 
 /*articleSearch Template*/
 
 /*
-.menu-400px {
-	display: none;
-}
-.article-search-home-gray {
-	width: 100%;
-	background-color: rgba(128, 128, 128, 0.59);
-	background-size: contain;
-	background-position: center center;
-	padding-top: 1%;
-	font-family: 'Questrial', sans-serif;
-	position: absolute;
-	padding-bottom: 10%;
 
-}
 
-.article-search-find {
-	width: 46%;
-	float: left;
-}
-
-.post-it {
-    background-repeat: no-repeat;
-    width: 98%;
-    float: left;
-    background-size: cover;
-
-}
-.post-it-bkg {
-    width: 98%;
-    position: absolute;
-    height: 592px;
-}
 
 
 .article-search-find {
@@ -196,10 +221,7 @@ section h2 {
 	float: left;
 	margin-left: 5%
 }
-.article-search-find h4 {
-	margin-left: 14%;
-	font-size: 20px;
-}
+
 .article-search-find ul{
   list-style: none;
   margin-left: 5%;
