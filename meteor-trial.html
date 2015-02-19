@@ -100,6 +100,14 @@
 
 <template name="articleTable">
   <div class="article-table">
+    <header>
+      <ul>
+        <li>noted</li>
+        <li>add a content</li>
+        <li>search</li>
+        <li>sign out</li>
+      </ul>  
+    </header>
     <h1>article list</h1>
     <table>
       <thead>
@@ -107,6 +115,7 @@
           <th>Title</th>
           <th>Type</th>
           <th>Expires on</th>
+          <th>Status</th>
           <th></th>
         </tr>
       </thead>
@@ -124,6 +133,7 @@
     <td>{{title}}</td>
     <td>{{type}}</td>
     <td>{{expiresOn}}</td>
+    <td>{{status}}</td>
     <td><a href="{{pathFor 'articleShow'}}">Show</a></td>
     <td><a href="{{pathFor 'articleEdit'}}">Edit</a></td>
     <td><a href="#" class="delete">Delete</a></td>

@@ -126,12 +126,9 @@ section h2 {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-<<<<<<< HEAD
 }
 .article-mobile-view-div {
 	display: none;
-=======
->>>>>>> ec3905c182ca7c6c09a22ae22c3a5d8465e93fb2
 }
 
 .article-search-div {
@@ -157,84 +154,8 @@ section h2 {
 .article-search-div li {
 	list-style: none;
 	padding-bottom: 5%;
-<<<<<<< HEAD
 }
 .article-search-div ul{
-=======
-}
-.article-search-div ul{
-  list-style: none;
-  margin-left: 14%;
-  padding-bottom: 5%;
-}
-.article-search-div ul input {
-  padding: 2px;
-  width: 80%;
-  font-size: 1em;
-  line-height: 24px;
-  border-radius: 4px;
-  border: none;
-  margin-top: 10px;
-  border: 1px solid rgba(128, 128, 128, 0.478431);
-}
-.article-search-div ul select {
-  padding: 2px;
-  width: 80%;
-  font-size: 1em;
-  line-height: 24px;
-  border-radius: 4px;
-  border: none;
-  margin-top: 10px;
-  border: 1px solid rgba(128, 128, 128, 0.478431);
-}
-
-.article-search-div button {
-  padding: 19px 51px 17px;
-  font-size: 17px;
-  line-height: 16px;
-  border: 2px solid;
-  text-transform: uppercase;
-  background-color: transparent;
-}
-.article-search-div button:hover {
-  background-color: rgb(223, 150, 18);
-}
-
-
-
-
-
-.article-view-div {
-  float: left;
-  background-color: blue;
-  width: 50%; 
-}
-
-
-
-
-
-/*Templates*/
-
-
-/*articleSearch Template*/
-
-/*
-
-
-
-
-.article-search-find {
-	background-color: rgba(255, 255, 255, 0.6);
-	margin-top: 4%;
-	border-bottom-width: 2px;
-	border-color: white;
-	float: left;
-	margin-left: 5%
-}
-
-.article-search-find ul{
->>>>>>> ec3905c182ca7c6c09a22ae22c3a5d8465e93fb2
   list-style: none;
   margin-left: 14%;
   padding-bottom: 5%;
@@ -290,7 +211,6 @@ section h2 {
   padding-left: 0;
 
 }
-
 .article-view-div h3 {
     font-size: 1.5em;
 	background-color: black;
@@ -307,6 +227,28 @@ section h2 {
   font-size: 1.5em;
   padding-bottom: 6%;
 }
+
+/*articleTable*/
+.article-table {
+	background-color: orange;
+	width: 100%;
+}
+.article-table table {
+	background-color: gray;
+	width: 80%;
+	margin-right: 10%;
+	margin-left: 10%;
+}
+.article-table table tr{
+	background-color: pink;
+	padding: 10%;
+}
+.article-table table tr th, td{
+	background-color: pink;
+	padding: 16px;
+}
+
+
 
 
 @media only screen and (max-width: 1003px) {
