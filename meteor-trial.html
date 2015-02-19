@@ -12,27 +12,38 @@
 </body>
 
 <template name="articleHome">
-  <header>
-    <ul class="nav-ul">
-      <li><a href="#">home</a></li>
-      <li class='nav'>search
-      <input type='search'>
-      </li>
-      <li class='nav' id='last'>sign out</li>
-    </ul>
+  
+    <header>
+      <ul class="nav-ul">
+        <li><a href="#">home</a></li>
+        <li class='nav'>search
+        <input type='search'>
+        </li>
+        <li class='nav' id='last'>sign out</li>
+      </ul>
     <div class="title-menu">
       <p>no<span>ted</span></p>
     </div>
   </header>
-  <section class="clearfix one" >
+  <section class="clearfix one article-home" >
     <h1>no<span>ted</span></h1>
     <h2>content organiser</h2>
+    {{> articleUserOptions}}
   </section>
-  {{> articleUserOptions}}
+  {{ > articleIndex }}
+  {{ > articleNew}}
 </template>
 
 <template name="articleUserOptions">
   <section class="article-user-options clearfix">
+    <div class="article-mobile-view-div">
+        <ul>
+          <li>add a content </li>
+          <li>view all contents</li>
+          <li>edit a content</li>
+          <li>search</li>
+        </ul>
+    </div>
     <div class="article-search-div">
       <h4>Search for content</h4>
       <ul>
@@ -71,14 +82,12 @@
           <li>edit a content</li>
         </ul>
       </div>
-      <div>
+      <div class="bug-cta">
         Found a bug?<br>
         Contact online
       </div>
     </div>  
   </section>
-  {{ > articleIndex }}
-  {{ > articleNew}}
 </template>
 
 
