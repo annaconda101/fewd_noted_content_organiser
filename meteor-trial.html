@@ -30,8 +30,6 @@
     <h2>content organiser</h2>
     {{> articleUserOptions}}
   </section>
-  {{ > articleIndex }}
-  {{ > articleNew}}
 </template>
 
 <template name="articleUserOptions">
@@ -90,32 +88,38 @@
   </section>
 </template>
 
+<template name="articleHeader">
+  <div class="article-header">
+    <header>
+      <ul class="clearfix">
+        <li class="title-menu"><a href="{{pathFor 'articleHome'}}"></a>no<span>ted</span></li>
+        <li>sign out</li>
+        <li>search</li>
+        <li>add a content</li>
+      </ul>  
+    </header>
+  </div>  
+</template>
 
 
 <template name="articleIndex">
   <div class="article-index">
+    {{> articleHeader }}
     {{> articleTable }}
   </div>
 </template>
 
 <template name="articleTable">
   <div class="article-table">
-    <!--<header>
-      <ul>
-        <li>noted</li>
-        <li>add a content</li>
-        <li>search</li>
-        <li>sign out</li>
-      </ul>  
-    </header>-->
-    <h1>article list</h1>
     <table>
       <thead>
+        <tr class="current-articls">
+        <h1>current articles</h1>
+        </tr>
         <tr>
           <th class="title">Title</th>
           <th class="attr">Type</th>
           <th class="attr">Expires on</th>
-          <th class="attr">Status</th>
           <th class="attr"></th>
           <th class="attr"></th>
           <th class="attr"></th>
@@ -135,7 +139,6 @@
     <td>{{title}}</td>
     <td class="attr">{{type}}</td>
     <td class="attr">{{expiresOn}}</td>
-    <td class="attr">{{status}}</td>
     <td class="attr button"><a href="{{pathFor 'articleShow'}}" class="button">Show</a></td>
     <td class="attr button"><a href="{{pathFor 'articleEdit'}}" class="button button">Edit</a></td>
     <td class="attr button"><a href="#" class="button">Delete</a></td>
@@ -143,6 +146,7 @@
 </template>
 
 <template name="articleNew">
+  {{> articleHeader }}
   <div class="article-new">
     <form class="new-article">
       <label class="title">Title</label><br>
@@ -192,53 +196,57 @@
 </template>
 
 <template name="articleEdit">
-  <h1>Edit Article</h1>
+  {{> articleHeader }}
   {{> articleEditForm }}
 </template>
 
 
 <template name="articleEditForm">
-  <form class="edit-article">
-    <div>
-      <label for="title">Title</label>
-      <input type="text" name="title" value="{{title}}">
-    </div>
-    <div>
-      <label class="article-type">Type</label><br>
-      <select type="type" name="type" value="{{type}}" class="type">
-        <optgroup label="Type">
-          <option>Article</option>
-          <option>Brand Post</option>
-          <option>Media Release</option>
-          <option>Event Posting</option>
-        </optgroup>
-      </select> 
-    </div>
-    <div>
-      <label class="author">Author</label><br>
-      <select type="author" name="author" value="{{author}}" class="author">
-        <optgroup label="Author">
-          <option>Author 1</option>
-          <option>Author 2</option>
-          <option>Author 3</option>
-          <option>Author 4</option>
-        </optgroup>
-      </select> 
-    </div>
-    <div>
-      <input type="date" name="created-at">
-    </div>
-    <div>
-      <label for="content">Content</label>
-      <textarea type="text" name="content" value="{{content}}"></textarea>
-    </div>
-    <div>
-        <label class="expiresOn">Expires on</label>
+  <div class="edit-container">
+      <form class="edit-article">
+        <h1>Edit Article id: {{ _id }}</h1>
+        <div>
+          <label for="title">Title</label><br>
+          <input type="text" name="title" value="{{title}}">
+        </div>
+        <div>
+          <label class="article-type">Type</label><br>
+          <select type="type" name="type" value="{{type}}" class="type">
+            <optgroup label="Type">
+            <option>Article</option>
+            <option>Brand Post</option>
+            <option>Media Release</option>
+            <option>Event Posting</option>
+          </optgroup>
+        </select> 
+      </div>
+      <div>
+        <label class="author">Author</label><br>
+        <select type="author" name="author" value="{{author}}" class="author">
+          <optgroup label="Author">
+            <option>Author 1</option>
+            <option>Author 2</option>
+            <option>Author 3</option>
+            <option>Author 4</option>
+          </optgroup>
+        </select> 
+      </div>
+      <div>
+        <label for="content">Content</label><br>
+        <textarea type="text" name="content" value="{{content}}"></textarea>
+      </div>
+      <div>
+        <label class="expiresOn">Created at</label><br>
+        <input type="date" name="created-at">
+      </div>
+      <div>
+        <label class="expiresOn">Expires on</label><br>
         <input type="date" name="expiresOn" value="{{expiresOn}}">
       </div>
-    <input type="submit" value="Update">
-  </form>
-</template>
+      <input class="button" type="submit" value="Update">
+    </form>
+    </div>
+  </template>
 
 
 <template name="articleShow">

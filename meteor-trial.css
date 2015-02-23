@@ -228,19 +228,45 @@ section h2 {
   padding-bottom: 6%;
 }
 
+/*articleHeader*/
+
+.article-header ul {
+	list-style: none;
+}
+.article-header ul li.title-menu {
+	float: left;
+	margin-left: 10px;
+}
+.article-header ul li {
+	float: right;
+}
+
+.article-header .title-menu {
+		display: inline;	
+		font-family: 'Questrial', sans-serif;
+		font-size: 2em;
+		color: white;
+		background-color: black;
+}
+.article-header span {
+		color: rgb(223, 150, 18);
+		background-color: black;	
+}
+
+
 /*articleTable*/
 
 .article-table {
   background-image: url("http://images.naldzgraphics.net/2012/06/free-cork-texture.jpg");
   background-size: cover;
   font-family: 'Questrial', sans-serif;
+  padding-top: 5%;
   padding-bottom: 5%;
 }
-
 .article-table table {
 	margin-right: 0;
 	margin-left: 0;
-	background-color: rgba(235, 160, 24, 1);
+	background-color: rgb(223, 150, 18);
 	border-color: black;
 	border-width: 1px;
 	border-radius: 4px 4px 0 0;
@@ -249,11 +275,14 @@ section h2 {
 	width: 80%;
 	margin-left: 10%;
 	margin-right: 10%;
-	box-shadow: 9px 9px 9px #EFDB5C;
+	box-shadow: 9px 9px 9px;
+	border: 1px solid black;
+	border-spacing: 0;
 }
 .article-table table td {
 	padding: 2%;
 	border-bottom: 1px solid black;
+	border-right: none;
 }
 .article-table table th {
 	padding: 2%;
@@ -272,19 +301,90 @@ th.title {
 	text-align: left;
 	padding-left: 2%;
 }
+tr:hover {
+	background-color: rgb(223, 140, 18);
+}
+
 .article-table a.button {
 	text-decoration: none;
 	color: black;
 }
 td.button:hover {
 	color: black;
-	background-color: rgb(223, 150, 18);
-	font-size: 22px;
+	font-size: 18px;
 	border: 2px solid;
 }
-
-
-
+.article-table table th tr h1 {
+	margin-left: 15px;
+}
+/*articleEditForm*/
+ .edit-container {
+ 	background: url("http://image.naldzgraphics.net/2012/08/14-Wrinkled.jpg");
+ 	background-size: cover;
+ 	padding-bottom: 5%;
+ 	padding-top: 5%;
+ 	font-family: 'Questrial', sans-serif;
+ }
+.edit-container textarea {
+	width: 80%;
+	margin-right: 10%;
+	margin-left: 10%;
+	height: 200px;
+	font-size: 16px;
+	margin-bottom: 20px;
+}
+.edit-article {
+  padding: 5%;	
+  background-color: rgba(255, 255, 255, 0.57);
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  border: 1px solid rgb(159, 149, 149);
+  box-shadow: 9px 9px 9px;
+}
+.edit-article input {
+  padding: 2px;
+  width: 80%;
+  font-size: 1em;
+  line-height: 24px;
+  border-radius: 4px;
+  border: none;
+  margin-top: 10px;
+  border: 1px solid rgba(128, 128, 128, 0.478431);
+  margin-right: 10%;
+  margin-left: 10%;
+  margin-bottom:  20px;
+}
+.edit-article .button {
+  width: 20%;	
+  padding: 19px 17px;
+  font-size: 17px;
+  line-height: 16px;
+  border: 2px solid;
+  text-transform: uppercase;
+  background-color: transparent;
+  margin-right: 20%;
+  margin-left: 60%;
+}
+.edit-article .button:hover {
+  background-color: rgb(223, 150, 18);
+}
+.edit-article select {
+  padding: 2px;
+  width: 80%;
+  font-size: 1em;
+  line-height: 24px;
+  border-radius: 4px;
+  border: none;
+  margin-top: 10px;
+  border: 1px solid rgba(128, 128, 128, 0.478431);
+  margin-right: 10%;
+  margin-left: 10%;
+  margin-bottom: 20px;
+}
+.edit-article label {
+	font-size: 20px;
+}
 
 
 @media only screen and (max-width: 1003px) {
