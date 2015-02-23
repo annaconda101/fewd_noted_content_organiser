@@ -229,24 +229,60 @@ section h2 {
 }
 
 /*articleTable*/
+
 .article-table {
-	background-color: orange;
-	width: 100%;
+  background-image: url("http://images.naldzgraphics.net/2012/06/free-cork-texture.jpg");
+  background-size: cover;
+  font-family: 'Questrial', sans-serif;
+  padding-bottom: 5%;
 }
+
 .article-table table {
-	background-color: gray;
+	margin-right: 0;
+	margin-left: 0;
+	background-color: rgba(235, 160, 24, 1);
+	border-color: black;
+	border-width: 1px;
+	border-radius: 4px 4px 0 0;
+	-webkit-box-shadow: none;
+	box-shadow: none;
 	width: 80%;
-	margin-right: 10%;
 	margin-left: 10%;
+	margin-right: 10%;
+	box-shadow: 9px 9px 9px #EFDB5C;
 }
-.article-table table tr{
-	background-color: pink;
-	padding: 10%;
+.article-table table td {
+	padding: 2%;
+	border-bottom: 1px solid black;
 }
-.article-table table tr th, td{
-	background-color: pink;
-	padding: 16px;
+.article-table table th {
+	padding: 2%;
+	border-bottom: 1px solid black;
+	font-weight: bold;
+	font-size: 22px;
+	text-decoration: underline;
 }
+td.attr {
+	text-align: center;
+}
+th.attr {
+	text-align: center;
+}
+th.title {
+	text-align: left;
+	padding-left: 2%;
+}
+.article-table a.button {
+	text-decoration: none;
+	color: black;
+}
+td.button:hover {
+	color: black;
+	background-color: rgb(223, 150, 18);
+	font-size: 22px;
+	border: 2px solid;
+}
+
 
 
 

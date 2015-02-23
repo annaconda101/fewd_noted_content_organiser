@@ -100,23 +100,25 @@
 
 <template name="articleTable">
   <div class="article-table">
-    <header>
+    <!--<header>
       <ul>
         <li>noted</li>
         <li>add a content</li>
         <li>search</li>
         <li>sign out</li>
       </ul>  
-    </header>
+    </header>-->
     <h1>article list</h1>
     <table>
       <thead>
         <tr>
-          <th>Title</th>
-          <th>Type</th>
-          <th>Expires on</th>
-          <th>Status</th>
-          <th></th>
+          <th class="title">Title</th>
+          <th class="attr">Type</th>
+          <th class="attr">Expires on</th>
+          <th class="attr">Status</th>
+          <th class="attr"></th>
+          <th class="attr"></th>
+          <th class="attr"></th>
         </tr>
       </thead>
       <tbody>
@@ -131,12 +133,12 @@
 <template name="articleRow">
   <tr>
     <td>{{title}}</td>
-    <td>{{type}}</td>
-    <td>{{expiresOn}}</td>
-    <td>{{status}}</td>
-    <td><a href="{{pathFor 'articleShow'}}">Show</a></td>
-    <td><a href="{{pathFor 'articleEdit'}}">Edit</a></td>
-    <td><a href="#" class="delete">Delete</a></td>
+    <td class="attr">{{type}}</td>
+    <td class="attr">{{expiresOn}}</td>
+    <td class="attr">{{status}}</td>
+    <td class="attr button"><a href="{{pathFor 'articleShow'}}" class="button">Show</a></td>
+    <td class="attr button"><a href="{{pathFor 'articleEdit'}}" class="button button">Edit</a></td>
+    <td class="attr button"><a href="#" class="button">Delete</a></td>
   </tr>
 </template>
 
