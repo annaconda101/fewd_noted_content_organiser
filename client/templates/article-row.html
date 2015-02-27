@@ -1,0 +1,10 @@
+<template name="articleRow">
+  <tr>
+    <td>{{title}}</td>
+    <td class="attr">{{type}}</td>
+    <td class="attr">{{expiresOn}}</td>
+    <td class="attr button"><a href="{{pathFor 'articleShow'}}" class="button">Show</a></td>
+    <td class="attr button"><a href="{{pathFor 'articleEdit'}}" class="button button">Edit</a></td>
+    <td class="attr button"><a href="#" class="button delete">Delete</a></td>
+  </tr>
+</template>

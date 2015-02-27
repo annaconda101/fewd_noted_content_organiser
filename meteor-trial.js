@@ -10,6 +10,7 @@ if (Meteor.isClient) {
     var articleAttr = {
         title: $(e.target).find('[name=title]').val(),
         content: $(e.target).find('[name=content]').val(),
+        summary: $(e.target).find('[name=summary').val(),
         type: $(e.target).find('[name=type]').val(),
         expiresOn: $(e.target).find('[name=expiresOn]').val
     };
@@ -60,7 +61,8 @@ if (Meteor.isClient) {
         title: $(e.target).find('[name=title]').val(),
         content: $(e.target).find('[name=content]').val(),
         type: $(e.target).find('[name=type]').val(),
-        expiresOn: $(e.target).find('[name=expiresOn]').val()
+        expiresOn: $(e.target).find('[name=expiresOn]').val(),
+        summary: $(e.target).find('[name=summary]').val()
       }
 
       Articles.update(_id, {$set: articleAttr}, function(error) {

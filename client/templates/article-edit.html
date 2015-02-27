@@ -1,0 +1,55 @@
+<template name="articleEdit">
+  {{> articleHeader }}
+  {{> articleEditForm }}
+</template>
+<template name="articleEditForm">
+  <div class="edit-container">
+      <form class="edit-article">
+        <h1>Edit Article id: {{ _id }}</h1>
+        <div>
+          <label for="title">Title</label><br>
+          <input type="text" name="title" value="{{title}}">
+        </div>
+        <div>
+          <label class="article-type">Type</label><br>
+          <select type="type" name="type" value="{{type}}" class="type">
+            <optgroup label="Type">
+            <option>Article</option>
+            <option>Brand Post</option>
+            <option>Media Release</option>
+            <option>Event Posting</option>
+          </optgroup>
+        </select> 
+      </div>
+      <div>
+        <label class="author">Author</label><br>
+        <select type="author" name="author" value="{{author}}" class="author">
+          <optgroup label="Author">
+            <option>Author 1</option>
+            <option>Author 2</option>
+            <option>Author 3</option>
+            <option>Author 4</option>
+          </optgroup>
+        </select> 
+      </div>
+      <div>
+        <label class="content"> Summary
+        </label><br>
+        <textarea class="summary-input" textype="text" name="summary" value="summary" placeholder="Enter summary"></textarea>
+      </div>
+      <div>
+        <label for="content">Content</label><br>
+        <textarea type="text" name="content" value="{{content}}"></textarea>
+      </div>
+      <div>
+        <label class="expiresOn">Created at</label><br>
+        <input type="date" name="created-at">
+      </div>
+      <div>
+        <label class="expiresOn">Expires on</label><br>
+        <input type="date" name="expiresOn" value="{{expiresOn}}">
+      </div>
+      <input class="button" type="submit" value="Update">
+    </form>
+    </div>
+  </template>

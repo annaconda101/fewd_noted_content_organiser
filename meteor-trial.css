@@ -50,31 +50,63 @@ header {
 	background-color: black;
 	color: white;
 	color: rgb(253, 251, 246);
-    font-family: 'Questrial', sans-serif;
-    font-size: 15px;
-    padding-top: 3px;
-    padding-bottom: 3px;
+  font-family: 'Questrial', sans-serif;
+  font-size: 15px;
+  padding-top: 1px;
+  padding-bottom: 1px;
 }
-header .nav {
-	display: inline-block;
+header .nav-ul {
 	list-style: none;
 	text-decoration: none;
 	padding: 0 3px;
 }
-header .nav a {
-  text-decoration: none;
+header ul.nav-ul li {
+  margin-left: 5%;
+  display: inline-block;
 }
-header .nav a:visited {
+header ul.nav-ul li a {
+  text-decoration: none;
+  font-size: 18px;
+}
+header ul.nav-ul li a:visited {
   text-decoration: none;
   color: white;
 }
-header .nav a:hover {
+header ul.nav-ul li a:hover {
 	color: rgb(223, 150, 18);
 	text-decoration: none;
 }
-li#last.nav{
-	float: right;
-	margin-right: 1%;
+header ul.nav-ul li.nav {
+  width: 55%;
+  margin-left: 2%;
+  margin-right: none;
+}
+header ul.nav-ul li.nav input {
+  color: #666;
+  outline: 0;
+  border: 0;
+  padding: 5px 7px;
+  background: #e5e5e5;
+  text-shadow: none;
+  width: 50%;
+  font-size: 16px;
+  border-radius: 2px;
+}
+header ul.nav-ul li.nav button {
+  background-color: rgb(223, 150, 18);
+  font-family: 'Questrial', sans-serif;
+  border-style: none;
+  font-size: 17px;
+  padding-left: 8px;
+  padding-top: 6px;
+  padding-bottom: 4px;
+  margin-left: -7px;
+  padding-right: 9px;
+}
+header p#last {
+  float: right;
+  margin-top: 6px;
+  margin-right: 2%;
 }
 .title-menu p {
 	display: none;
@@ -205,19 +237,16 @@ section h2 {
   padding-bottom: 4%;
   height: 300px;
   font-family: 'Questrial', sans-serif;
-  padding-left: 3%;
 }
 .article-view-div ul {
   padding-left: 0;
-
 }
 .article-view-div h3 {
-    font-size: 1.5em;
+  font-size: 1.5em;
 	background-color: black;
 	color: orange;
 	margin-left: 0;
-	padding-left: 0;
-	margin-right: 28px;
+	padding: 2%;
 	text-align: center;
 }
 .article-view-div li {
@@ -225,7 +254,20 @@ section h2 {
   font-size: 1em;
   list-style: none;
   font-size: 1.5em;
-  padding-bottom: 6%;
+  padding-bottom: 3%;
+  padding-top: 3%;
+  text-align: center;
+}
+.article-view-div li a {
+  text-decoration: none;
+  padding-left: 5%;
+}
+.article-view-div li a:visited {
+  text-decoration: none;
+  color: black;
+}
+.article-view-div li:hover {
+  background-color: rgb(223, 140, 18);
 }
 
 /*articleHeader*/
@@ -240,6 +282,14 @@ section h2 {
 .article-header ul li {
 	float: right;
 }
+.article-header ul li a {
+  text-decoration: none;
+  color: white;
+}
+.article-header ul li a:visited {
+  text-decoration: none;
+  color: white;
+}
 
 .article-header .title-menu {
 		display: inline;	
@@ -251,6 +301,10 @@ section h2 {
 .article-header span {
 		color: rgb(223, 150, 18);
 		background-color: black;	
+}
+.article-header ul li.last {
+   margin-right: 20px;
+   margin-top: 10px;
 }
 
 
@@ -385,8 +439,94 @@ td.button:hover {
 .edit-article label {
 	font-size: 20px;
 }
+/*articleNew*/
 
 
+.article-new {
+ 	background: url("http://image.naldzgraphics.net/2012/08/14-Wrinkled.jpg");
+ 	background-size: cover;
+ 	padding-bottom: 5%;
+ 	padding-top: 5%;
+ 	font-family: 'Questrial', sans-serif;
+ }
+
+.article-new textarea {
+	width: 80%;
+	margin-right: 10%;
+	margin-left: 10%;
+	height: 200px;
+	font-size: 16px;
+	margin-bottom: 20px;
+}
+.new-article {
+  padding: 5%;	
+  background-color: rgba(255, 255, 255, 0.57);
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  border: 1px solid rgb(159, 149, 149);
+  box-shadow: 9px 9px 9px;
+}
+.new-article input {
+  padding: 2px;
+  width: 80%;
+  font-size: 1em;
+  line-height: 24px;
+  border-radius: 4px;
+  border: none;
+  margin-top: 10px;
+  border: 1px solid rgba(128, 128, 128, 0.478431);
+  margin-right: 10%;
+  margin-left: 10%;
+  margin-bottom:  20px;
+}
+button.submit {
+  width: 20%;	
+  padding: 19px 17px;
+  font-size: 17px;
+  line-height: 16px;
+  border: 2px solid;
+  text-transform: uppercase;
+  background-color: transparent;
+  margin-right: 20%;
+  margin-left: 60%;
+}
+button.submit:hover {
+  background-color: rgb(223, 150, 18);
+}
+.new-article select {
+  padding: 2px;
+  width: 80%;
+  font-size: 1em;
+  line-height: 24px;
+  border-radius: 4px;
+  border: none;
+  margin-top: 10px;
+  border: 1px solid rgba(128, 128, 128, 0.478431);
+  margin-right: 10%;
+  margin-left: 10%;
+  margin-bottom: 20px;
+}
+.new-article label {
+	font-size: 20px;
+}
+/*articleShow*/
+.article-show {
+ 	background: url("http://image.naldzgraphics.net/2012/08/14-Wrinkled.jpg");
+ 	background-size: cover;
+ 	padding-bottom: 5%;
+ 	font-family: 'Questrial', sans-serif;
+ }
+ .article-show-form {
+    padding: 5%;	
+    background-color: rgba(255, 255, 255, 0.57);
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    border: 1px solid rgb(159, 149, 149);
+    box-shadow: 9px 9px 9px;
+    margin-top: 5%;
+}
 @media only screen and (max-width: 1003px) {
   .article-view-div {
     width: 350px;
@@ -539,20 +679,33 @@ td.button:hover {
 	header {
       padding: 2%;
 	}	
-	.title-menu {
-		margin-left: 40%;
-	}
 	.title-menu p {
 		display: inline;	
 		font-family: 'Questrial', sans-serif;
 		font-size: 2em;
 		color: white;
 		background-color: black;
+    margin-top: 2px;
+    margin-bottom: 2px;
 	}
+  .title-menu a {
+    text-decoration: none;
+    color: white;
+  }
+  .title-menu a:visited {
+    text-decoration: none;
+    color: white;
+  }
 	.title-menu p span {
 		color: orange;
 		background-color: black;
 	}
+  .title-menu p#last {
+    float: right;
+    margin-top: 5px;
+    font-size: 18px;
+  }
+
 	.article-search-div {
 		display: none;
 	}
@@ -573,35 +726,39 @@ td.button:hover {
 		background-color: white;
 	}
 	.article-mobile-view-div {
-		float: right;
-		background-color: rgba(232, 229, 223, 0.72);
-		width: 80%;
+		  float: right;
+		  background-color: rgba(232, 229, 223, 0.72);
+		  width: 80%;
    		border: solid rgb(20, 7, 7) 1.5px;
-		padding-top: 2%;
-		padding-bottom: 2%;
-		height: 250px;
-		font-family: 'Questrial', sans-serif;
-		text-align: center;
-		box-shadow: 5px 5px 5px #888888;
-		position: center;
-		margin-left: 10%;
-		margin-right: 10%;
-
-
+		  padding-top: 2%;
+		  padding-bottom: 2%;
+		  height: 250px;
+		  font-family: 'Questrial', sans-serif;
+		  text-align: center;
+		  box-shadow: 5px 5px 5px #888888;
+		  position: center;
+		  margin-left: 10%;
+		  margin-right: 10%;
 	}
 	.article-mobile-view-div ul {
   		padding-left: 0;
   		margin-top: 7%;
-
 	}
 	.article-mobile-view-div li {
   		list-style: none;
   		font-size: 1em;
   		list-style: none;
   		font-size: 1.5em;
-  		padding-bottom: 6%;
-  		
+  		padding-bottom: 6%;  		
 	}
+  .article-mobile-view-div li a {
+    text-decoration: none;
+  }
+  .article-mobile-view-div li a:visited {
+    text-decoration: none;
+    color: black;
+  }
+
 }
 
 

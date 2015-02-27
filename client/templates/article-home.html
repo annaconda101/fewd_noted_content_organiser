@@ -1,0 +1,21 @@
+<template name="articleHome">
+  <header>
+    <ul class="nav-ul">
+      <li><a href="http://localhost:3000/">home</a></li>
+      <li class='nav'>
+        <input type='search' placeholder="Enter Text"><button>search</button></li>
+        <p class='nav' id='last'>sign out</p>
+    </ul>
+      
+    <div class="title-menu">
+      <p><a href="http://localhost:3000/">no<span>ted</span></a></p>
+      <p id='last'>sign out</p>
+    </div>
+
+  </header>
+  <section class="clearfix one article-home" >
+    <h1>no<span>ted</span></h1>
+    <h2>content organiser</h2>
+    {{> articleUserOptions}}
+  </section>
+</template>

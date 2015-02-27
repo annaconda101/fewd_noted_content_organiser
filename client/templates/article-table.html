@@ -1,0 +1,24 @@
+<template name="articleTable">
+  <div class="article-table">
+    <table>
+      <thead>
+        <tr class="current-articles">
+        <h1>current articles</h1>
+        </tr>
+        <tr>
+          <th class="title">Title</th>
+          <th class="attr">Type</th>
+          <th class="attr">Expires on</th>
+          <th class="attr"></th>
+          <th class="attr"></th>
+          <th class="attr"></th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each articles}}
+          {{> articleRow}}
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+</template>

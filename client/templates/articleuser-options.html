@@ -1,0 +1,51 @@
+<template name="articleUserOptions">
+  <section class="article-user-options clearfix">
+    <div class="article-mobile-view-div">
+        <ul>
+          <li><a href="{{pathFor 'articleNew'}}">add a content</a> </li>
+          <li><a href="http://localhost:3000/articles">view all contents</a></li>
+          <li><a href="http://localhost:3000/articles">edit a content</a></li>
+          <li>search</li>
+        </ul>
+    </div>
+    <div class="article-search-div">
+      <h4>Search for content</h4>
+      <ul>
+        <li>
+          <label class="searchID">Find by ID</label><br>
+          <input type="text">
+        </li>
+        <li>
+          <label class="search-keyword">Search by keyword</label><br>
+          <input type="text">
+        </li>
+        <li>  
+          <label class="search-type">Search by type</label><br>
+          <select type="text" name="type" value="type" class="type">
+            <optgroup label="Type">
+            <option>Article</option>
+            <option>Brand Post</option>
+            <option>Media Release</option>
+            <option>Event Posting</option>
+            </optgroup>
+          </select>
+        </li>
+        <li>
+          <button>Search
+          </button>
+        </li>
+      </ul>  
+    </div>
+
+    <div class="article-view-div">
+      <div>
+        <h3>what would you like to do?</h3>
+        <ul>
+          <li><a href="http://localhost:3000/articles/new/">add a content</a></li>
+          <li><a href="http://localhost:3000/articles">view all contents</a></li>
+          <li><a href="http://localhost:3000/articles">edit a content</a></li>
+        </ul>
+      </div>
+    </div>  
+  </section>
+</template>
