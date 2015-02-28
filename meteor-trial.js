@@ -1,6 +1,8 @@
 Articles = new Mongo.Collection("articles");
 
+
 if (Meteor.isClient) {
+
 
 //Adding
   Template.articleNew.events({
@@ -10,7 +12,7 @@ if (Meteor.isClient) {
     var articleAttr = {
         title: $(e.target).find('[name=title]').val(),
         content: $(e.target).find('[name=content]').val(),
-        summary: $(e.target).find('[name=summary').val(),
+        summary: $(e.target).find('[name=summary]').val(),
         type: $(e.target).find('[name=type]').val(),
         expiresOn: $(e.target).find('[name=expiresOn]').val
     };
@@ -28,6 +30,12 @@ if (Meteor.isClient) {
   
   //Index
   Template.articleTable.helpers({
+    articles: function() {
+      return Articles.find({}, {sort: {title: 1}});
+    }
+  });
+
+ Template.articleCarousel.helpers({
     articles: function() {
       return Articles.find({}, {sort: {title: 1}});
     }
